@@ -1,10 +1,17 @@
 # arxivの学問領域の指定
-subject: 'cat:cs.*'
+subject: 'cat:cs.* OR cat:stat.ML'
 
 # 検索キーワード
 keywords:
-        kaggle: 3
-        resnet: 3
+        time series: 1
+        symbolic regression: 1
+        reinforcement : 1
+        neural ordinary differential equation : 1
+        neural architecture search : 1
+        graph neural network : 1
+        distillation : 1
+        transformer : 1
+        attention : 1
         anomaly detection: 1
 
 # 通知の閾値
