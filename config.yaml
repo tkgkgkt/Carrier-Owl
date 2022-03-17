@@ -5,14 +5,15 @@ subject: 'cat:cs.* OR cat:stat.ML'
 keywords:
         time series: 1
         symbolic regression: 1
-        reinforcement : 1
-        neural ordinary differential equation : 1
-        neural architecture search : 1
-        graph neural network : 1
-        distillation : 1
-        transformer : 1
-        attention : 1
+        reinforcement: 1
+        neural ordinary differential equation: 1
+        neural architecture search: 1
+        graph neural network: 1
+        distillation: 1
+        transformer: 1
+        attention: 1
         anomaly detection: 1
+        continual learning: 1
 
 # 通知の閾値
 score_threshold: 0
