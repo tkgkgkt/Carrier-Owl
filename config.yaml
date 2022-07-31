@@ -15,6 +15,9 @@ keywords:
         attention: 1
         anomaly detection: 1
         continual learning: 1
+        MLOps: 1
+        echo state network: 1
+        reservoir computing: 1
 
 # 通知の閾値
 score_threshold: 0
