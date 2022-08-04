@@ -124,7 +124,7 @@ def get_translated_text(from_lang: str, to_lang: str, from_text: str, driver) ->
 
     # url作成
     url = 'https://www.deepl.com/translator#' \
-        + from_lang + '/' + to_lang + '/' + from_text.replace('/', '\/')
+        + from_lang + '/' + to_lang + '/' + from_text.replace('/', '\/').replace('\n', ' ')
     print(url)
 
     driver.get(url)
@@ -143,6 +143,7 @@ def get_translated_text(from_lang: str, to_lang: str, from_text: str, driver) ->
 
 def get_text_from_page_source(html: str) -> str:
     soup = BeautifulSoup(html, features='lxml')
+    print(soup)
     target_elem = soup.find_all(class_="lmt__translations_as_text__text_btn")
     text = target_elem[0].text
     return text
