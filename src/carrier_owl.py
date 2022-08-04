@@ -125,7 +125,7 @@ def get_translated_text(from_lang: str, to_lang: str, from_text: str, driver) ->
 
     # url作成
     url = 'https://www.deepl.com/translator#' \
-        + from_lang + '/' + to_lang + '/' + from_text.replace('/', '\/').replace('\r\n', ' ').replace('\n', ' ')
+        + from_lang + '/' + to_lang + '/' + from_text.replace('/', '\/').replace('%0A','')
     print(url)
 
     driver.get(url)
