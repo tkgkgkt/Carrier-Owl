@@ -125,6 +125,7 @@ def get_translated_text(from_lang: str, to_lang: str, from_text: str, driver) ->
     # url作成
     url = 'https://www.deepl.com/translator#' \
         + from_lang + '/' + to_lang + '/' + from_text.replace('/', '\/')
+    print(url)
 
     driver.get(url)
     driver.implicitly_wait(10)  # 見つからないときは、10秒まで待つ
@@ -133,7 +134,6 @@ def get_translated_text(from_lang: str, to_lang: str, from_text: str, driver) ->
         # 指定時間待つ
         time.sleep(sleep_time)
         html = driver.page_source
-        print(html)
         to_text = get_text_from_page_source(html)
 
         if to_text:
