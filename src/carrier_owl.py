@@ -133,6 +133,7 @@ def get_translated_text(from_lang: str, to_lang: str, from_text: str, driver) ->
         # 指定時間待つ
         time.sleep(sleep_time)
         html = driver.page_source
+        print(html)
         to_text = get_text_from_page_source(html)
 
         if to_text:
@@ -143,7 +144,6 @@ def get_translated_text(from_lang: str, to_lang: str, from_text: str, driver) ->
 def get_text_from_page_source(html: str) -> str:
     soup = BeautifulSoup(html, features='lxml')
     target_elem = soup.find_all(class_="lmt__translations_as_text__text_btn")
-    print(target_elem)
     text = target_elem[0].text
     return text
 
